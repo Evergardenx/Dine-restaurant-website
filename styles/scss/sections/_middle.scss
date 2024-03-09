@@ -1,0 +1,187 @@
+.middle {
+  background-color: var(--color-white);
+
+  @media (max-width: $bp-tablet-end) {
+    text-align: center;
+  }
+
+  background-repeat: no-repeat;
+  @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+    background-position-y: 10rem, bottom;
+    background-position-x: -67vw, 52vw;
+    background-image: url(../../../images/patterns/pattern-curve-top-right.svg), url(../../../images/patterns/pattern-curve-top-left.svg);
+  }
+  @media (min-width: $bp-desktop) {
+    background-image: url(../../../images/patterns/pattern-curve-top-right.svg), url(../../../images/patterns/pattern-curve-top-left.svg);
+    background-position-y: 24.2rem, bottom;
+    background-position-x: left, right;
+  }
+
+  &__family {
+    @media (max-width: $bp-mobile) {
+      margin-bottom: 0.8rem;
+    }
+    @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+      margin-bottom: 2.4rem;
+    }
+    @media (min-width: $bp-desktop) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: -2.9rem;
+    }
+  }
+  &__locally {
+    position: relative;
+
+    @media (min-width: $bp-desktop) {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__floating-pattern {
+      display: none;
+      z-index: 1;
+      position: absolute;
+      @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+        display: block;
+        right: 0;
+        top: 22.8rem;
+        transform: translateX(5.8rem);
+      }
+      @media (min-width: $bp-desktop) {
+        display: block;
+        right: 0;
+        top: 36rem;
+        transform: translateX(11.4rem);
+      }
+    }
+  }
+
+  &__content {
+    &--first {
+      @media (max-width: $bp-mobile) {
+        transform: translateY(-7.2rem);
+      }
+      @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+        transform: translateY(-9.6rem);
+      }
+      @media (min-width: $bp-desktop) {
+        transform: translateY(-4rem);
+      }
+    }
+    &--second {
+      @media (min-width: $bp-desktop) {
+        margin-top: 11.5rem;
+      }
+    }
+    @media (max-width: $bp-mobile) {
+      margin-top: 4.8rem;
+    }
+    @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+      margin-top: 5.6rem;
+    }
+    @media (min-width: $bp-desktop) {
+      max-width: 44.5rem;
+    }
+
+    &__body {
+      @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+        max-width: 45.7rem;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__container {
+    @media (max-width: $bp-mobile) {
+      padding: 0 2.4rem 8rem;
+    }
+    @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+      padding: 0 9.7rem 12rem;
+    }
+    @media (min-width: $bp-desktop) {
+      max-width: 111rem;
+      margin: 0 auto;
+    }
+  }
+
+
+  &__section-card {
+    box-shadow: var(--card-shadow);
+    @media (min-width: $bp-desktop) {
+      min-width: 54rem;
+      height: 72rem;
+    }
+    &--first {
+      @media (max-width: $bp-mobile) {
+        transform: translateY(-7.2rem);
+      }
+      @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+        transform: translateY(-9.6rem);
+      }
+      @media (min-width: $bp-desktop) {
+        transform: translateY(-7rem);
+      }
+    }
+    &--second {
+      @media (min-width: $bp-desktop) {
+        transform: translateY(8rem);
+      }
+    }
+
+    &__image {
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      &--first {
+        @media (max-width: $bp-mobile) {
+          background-image: url(../../../images/homepage/enjoyable-place-mobile@2x.jpg);
+        }
+        @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+          background-image: url(../../../images/homepage/enjoyable-place-tablet@2x.jpg);
+        }
+        @media (min-width: $bp-desktop) {
+          background-image: url(../../../images/homepage/enjoyable-place-desktop@2x.jpg);
+        }
+      }
+      &--second {
+        @media (max-width: $bp-mobile) {
+          background-image: url(../../../images/homepage/locally-sourced-mobile@2x.jpg);
+        }
+        @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+          background-image: url(../../../images/homepage/locally-sourced-tablet@2x.jpg);
+        }
+        @media (min-width: $bp-desktop) {
+          background-image: url(../../../images/homepage/locally-sourced-desktop@2x.jpg);
+        }
+      }
+
+      @media (max-width: $bp-mobile) {
+        min-height: 40rem;
+        background-position: center center;
+      }
+      @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+        min-height: 36rem;
+      }
+      @media (min-width: $bp-desktop) {
+        min-height: 72rem;
+      }
+    }
+
+  }
+
+  &__heading {
+    margin-bottom: 1.6rem;
+
+    @media (max-width: $bp-tablet-end) {
+      margin-top: 3.2rem;
+    }
+    @media (min-width: $bp-desktop) {
+      margin-top: 4.8rem;
+    }
+  }
+}

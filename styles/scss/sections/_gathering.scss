@@ -1,0 +1,190 @@
+.gathering {
+  background-color: var(--color-white);
+  
+  @media (max-width: $bp-tablet-end) {
+    text-align: center;
+  }
+  @media (max-width: $bp-mobile) {
+    padding: 8rem 2.4rem 12.4rem;
+  }
+  @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+    padding: 12rem 0;
+    background-image: url(../../../images/patterns/pattern-curve-top-right.svg);
+    background-repeat: no-repeat;
+    background-position-x: -69vw;
+  }
+  @media (min-width: $bp-desktop) {
+    padding: 16rem 0;
+    background-repeat: no-repeat;
+    background-image: url(../../../images/patterns/pattern-curve-top-right.svg);
+    background-position-x: -35rem;
+  }
+
+  &__container {
+    @media (min-width: $bp-desktop) {
+      max-width: 111rem;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__slider {
+    @media (max-width: $bp-mobile) {
+      max-width: 32.6rem;
+      margin: 0 auto;
+    }
+  }
+  &__slide {
+    &__floating-pattern {
+      display: none;
+      z-index: 1;
+    }
+    @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+      width: 74.609%;
+      margin: 0 auto;
+      position: relative;
+      &__floating-pattern {
+        display: block;
+        position: absolute;
+        transform: translate(-5.8rem, -3.8rem);
+      }
+    }
+    @media (min-width: $bp-desktop) {
+      position: relative;
+      &__floating-pattern {
+        display: block;
+        position: absolute;
+        transform: translate(-4rem, -3.8rem);
+      }
+    }
+    
+
+    &__image-container {
+      &__image {
+        width: 100%;
+        animation: FadeIn ease-in-out 0.5s;
+      }
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: var(--card-shadow);
+      @media (max-width: $bp-mobile) {
+        height: 40rem;
+      }
+      @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+        height: 36rem;
+        width: 57.3rem;
+        margin: 0 auto;
+      }
+      @media (min-width: $bp-desktop) {
+        height: 60rem;
+        width: 54rem;
+      }
+    }
+  }
+
+  &__events {
+    list-style-type: none;
+    @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+      display: flex;
+      max-width: 68.9rem;
+      justify-content: space-around;
+      margin: 0 auto;
+    }
+    @media (min-width: $bp-desktop) {
+      margin-top: 7.8rem;
+    }
+  }
+  &__event {
+    cursor: pointer;
+    text-transform: uppercase;
+    opacity: 0.5;
+    transition: var(--transition) opacity;
+    &.active {
+      opacity: 1;
+    }
+    &:hover {
+      opacity: 1;
+    }
+    @media (max-width: $bp-tablet-end) {
+      &__underline {
+        width: 4.8rem;
+        margin: 0 auto;
+        border: 1px solid transparent;
+        transition: var(--transition) border-color;
+        &.active {
+          border-color: var(--color-beaver);
+        }
+      }
+      &:hover &__underline {
+        border-color: var(--color-beaver);
+      }
+    }
+    @media (min-width: $bp-desktop) {
+      position: relative;
+      &__underline {
+        top: 50%;
+        height: 1px;
+        width: 9.5rem;
+        position: absolute;
+        transform: translate(-12.5rem, -0.2rem);
+        background-color: transparent;
+        transition: var(--transition) background-color;
+        &.active {
+          background-color: var(--color-beaver);
+        }
+      }
+      &:hover &__underline {
+        background-color: var(--color-beaver);
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__content {
+    @media (max-width: $bp-mobile) {
+      margin-top: 4.8rem;
+    }
+    @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+      margin-top: 5.6rem;
+    }
+    @media (min-width: $bp-desktop) {
+      display: flex;
+      flex-direction: column-reverse;
+      max-width: 44.5rem;
+    }
+  }
+
+  &__text {
+    @media (max-width: $bp-mobile) {
+      margin-top: 2.4rem;
+    }
+    @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+      margin-top: 4rem;
+    }
+
+    &__body {
+      margin-top: 1.6rem;
+      margin-bottom: 3.2rem;
+      @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+        max-width: 47.5rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
